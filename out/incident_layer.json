@@ -1,0 +1,129 @@
+{
+  "name": "EDR Incident: Technique Coverage",
+  "versions": {
+    "attack": "18",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "WINWORD → PowerShell EncodedCommand → rundll32 DLL → Scheduled Task → External IP",
+  "filters": {
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": false,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1059",
+      "tactic": "execution",
+      "score": 70,
+      "color": "",
+      "comment": "PowerShell",
+      "enabled": true,
+      "metadata": [],
+      "links": [],
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1218",
+      "tactic": "defense-evasion",
+      "score": 60,
+      "color": "",
+      "comment": "System Binary Proxy Execution",
+      "enabled": true,
+      "metadata": [],
+      "links": [],
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1053",
+      "tactic": "execution",
+      "score": 90,
+      "color": "",
+      "comment": "Scheduled Task | Tactics: Execution, Persistence, Privilege Escalation",
+      "enabled": true,
+      "metadata": [],
+      "links": [],
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1053",
+      "tactic": "persistence",
+      "score": 90,
+      "color": "",
+      "comment": "Scheduled Task | Tactics: Execution, Persistence, Privilege Escalation",
+      "enabled": true,
+      "metadata": [],
+      "links": [],
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1053",
+      "tactic": "privilege-escalation",
+      "score": 90,
+      "color": "",
+      "comment": "Scheduled Task | Tactics: Execution, Persistence, Privilege Escalation",
+      "enabled": true,
+      "metadata": [],
+      "links": [],
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1071",
+      "tactic": "command-and-control",
+      "score": 40,
+      "color": "",
+      "comment": "Web Protocols",
+      "enabled": true,
+      "metadata": [],
+      "links": [],
+      "showSubtechniques": true
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#8ec843ff",
+      "#ffe766ff",
+      "#ff6666ff"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [],
+  "metadata": [
+    {
+      "name": "Generated",
+      "value": "2025-12-19T00:13:48.112699Z"
+    },
+    {
+      "name": "Domain",
+      "value": "enterprise"
+    },
+    {
+      "name": "ATT&CK Version",
+      "value": "18"
+    }
+  ],
+  "links": [
+    {
+      "label": "MITRE ATT&CK MCP Server",
+      "url": "https://github.com/imouiche/complete-mitre-attack-mcp-server"
+    }
+  ],
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false
+}
